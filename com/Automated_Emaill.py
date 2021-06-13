@@ -1,18 +1,19 @@
 import smtplib
 import speech_recognition as sr
-# import PyAudio
 
 listner = sr.Recognizer()
 
 
 def get_info():
-    # try:
+    try:
         with sr.Microphone() as source:
             print("listening.......")
             voice = listner.listen(source)
             info = listner.recognize_google(voice)
             print(info)
             return info.lower()
+    except:
+        pass
 
 
 
