@@ -1,5 +1,6 @@
 import smtplib
 import speech_recognition as sr
+import pyAudio
 
 listner = sr.Recognizer()
 
